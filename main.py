@@ -26,6 +26,6 @@ tmax = config['tmax']
 epochs = mne.io.read_epochs(fname)
 epochs.apply_baseline((tmin,tmax))
 
-# save mne/raw
-epochs.save(os.path.join('out_dir','epochs_baselinecorr-epo.fif'))
+# save mne/epochs: blc stands for baseline corrected
+epochs.save(os.path.join('out_dir','blc-epo.fif'))
 
