@@ -23,7 +23,7 @@ fname = config['epochs']
 tmin = config['tmin']
 tmax = config['tmax']
 
-epochs = mne.io.read_epochs(fname)
+epochs = mne.read_epochs(fname)
 epochs.apply_baseline((tmin,tmax))
 
 # save mne/epochs: blc stands for baseline corrected
